@@ -14,7 +14,7 @@ public class TransferOrder {
         this.toAccountId = toAccountId;
         this.amount = amount;
     }
-    @Override
+//@override
     public String getOrderId(){
         return orderId;
     }
@@ -27,7 +27,7 @@ public class TransferOrder {
     public Date getTime(){
         return time;
     }
-    @Override
+//@override
     public boolean getIsSuccess(){
         return isSuccess;
     }

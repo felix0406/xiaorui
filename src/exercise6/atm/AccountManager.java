@@ -43,7 +43,7 @@ public class AccountManager {
             Account account = accounts[i];
             if (account == null) {
                 continue;
-                ;
+
             }
             if (account.accountId.equals(accountId) && account.password.equals(password)) {
                 currrentAccount = account;
