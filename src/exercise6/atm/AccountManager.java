@@ -14,7 +14,7 @@ public class AccountManager {
         account.username = username;
         account.password = password;
         account.accountId = getRandomAccountId();
-        account[ currentAccountIndex ] = account;
+        accounts [ currentAccountIndex ] = account;
         currentAccountIndex ++;
         return account;
 
