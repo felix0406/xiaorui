@@ -64,9 +64,7 @@ public class Main {
         System.out.println("2.存钱");
         System.out.println("3.转账");
         System.out.println("4.查询余额");
-        System.out.println("5.查询存取款记录");
-        System.out.println("6.查询转账记录");
-        System.out.println("7.退出");
+        System.out.println("5.退出");
         Scanner in = new Scanner(System.in);
         int choice = in.nextInt();
         switch(choice){
@@ -112,6 +110,9 @@ public class Main {
                 System.out.println("===退出===");
                 printMainMenu();
                 break;
+
+
+
             default:
                 System.out.println("输入错误!!!");
                 printUserMenu();

@@ -14,21 +14,35 @@ public class TransferOrder {
         this.toAccountId = toAccountId;
         this.amount = amount;
     }
-//@override
+    public String getToAccountId() {
+        return toAccountId;
+    }
+    public boolean isSuccess() {
+        return isSuccess;
+    }
+    public void setSuccess(boolean success) {
+        isSuccess = success;
+    }
+    //@override
     public String getOrderId(){
+
         return orderId;
     }
     public String getFromAccountId(){
+
         return getFromAccountId();
     }
     public double getAmount(){
         return amount;
     }
     public Date getTime(){
+
         return time;
     }
-//@override
+
+    //@override
     public boolean getIsSuccess(){
+
         return isSuccess;
     }
 }
