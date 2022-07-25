@@ -95,13 +95,13 @@ public class AccountManager {
         return 0;
     }
 
-    public static boolean transfer(String toAccountId, String tousername, double amount) {
+    public static boolean transfer(String toAccountId, String toUsername, double amount) {
         if (currrentAccount == null) {
             System.out.println("请先登录");
             Main.printMainMenu();
             return false;
         }
-        Account toAccount = getAccountByIdAndUsername(toAccountId, tousername);
+        Account toAccount = getAccountByIdAndUsername(toAccountId, toUsername);
         if (toAccount == null) {
             System.out.println("账户不存在");
             return false;

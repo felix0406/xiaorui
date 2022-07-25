@@ -64,7 +64,8 @@ public class Main {
         System.out.println("2.存钱");
         System.out.println("3.转账");
         System.out.println("4.查询余额");
-        System.out.println("5.退出");
+        System.out.println("5.查询流水");
+        System.out.println("6.退出");
         Scanner in = new Scanner(System.in);
         int choice = in.nextInt();
         switch(choice){
@@ -94,7 +95,7 @@ public class Main {
                 amount = in.nextDouble();
                 boolean result = AccountManager.transfer(toAccountId, toUserName, amount);
                 if (result){
-                    System.out.println("转账成功");
+                    System.out.println("转账成功" + "您已成功向账号为" + toAccountId + "的用户" + toUserName + "转入" + amount + "元");
                 }else{
                     System.out.println("转账失败");
                 }
@@ -106,13 +107,11 @@ public class Main {
                 System.out.println("您的余额为: " + balance);
                 printUserMenu();
                 break;
-            case 5:
+
+            case 6:
                 System.out.println("===退出===");
                 printMainMenu();
                 break;
-
-
-
             default:
                 System.out.println("输入错误!!!");
                 printUserMenu();
