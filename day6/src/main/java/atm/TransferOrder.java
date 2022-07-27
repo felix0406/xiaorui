@@ -1,4 +1,4 @@
-package exercise6.atm;
+package atm;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ public class TransferOrder {
     private double amount;
     private boolean isSuccess;
     private Date time = new Date();
-    public  TransferOrder(String fromAccountId,String toAccountId,double amount){
+    public  TransferOrder(String fromAccountId,String toAccountId,double amount, boolean isSuccess){
         this.fromAccountId = fromAccountId;
         this.toAccountId = toAccountId;
         this.amount = amount;
@@ -33,6 +33,7 @@ public class TransferOrder {
         return getFromAccountId();
     }
     public double getAmount(){
+
         return amount;
     }
     public Date getTime(){
@@ -45,4 +46,5 @@ public class TransferOrder {
 
         return isSuccess;
     }
+
 }

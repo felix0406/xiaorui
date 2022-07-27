@@ -1,4 +1,4 @@
-package exercise6.atm;
+package atm;
 import java.util.Date;
 public abstract class Order {
     public String orderId;

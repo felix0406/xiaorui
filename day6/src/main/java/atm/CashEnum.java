@@ -1,4 +1,4 @@
-package exercise6.atm;
+package atm;
 
 public enum CashEnum {
     WITHDRAW,

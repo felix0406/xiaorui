@@ -1,4 +1,4 @@
-package exercise6.atm;
+package atm;
 import java.util.Date;
 import java.util.Random;
 public final class CashOrder extends Order {

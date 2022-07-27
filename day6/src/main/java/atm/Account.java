@@ -1,4 +1,4 @@
-package exercise6.atm;
+package atm;
 import java.util.Date;
 public class Account {
     public String accountId;
