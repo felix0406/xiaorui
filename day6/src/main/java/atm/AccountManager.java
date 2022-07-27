@@ -17,6 +17,16 @@ public class AccountManager {
     //public static int currentAccountIndex = 0;
     public static Account currrentAccount = null;
 
+    private void privateMethod(String str) {
+        System.out.println("private method" + str);
+    }
+
+    private static void privateStaticMethod(String str) {
+        System.out.println("private method" + str);
+    }
+    private static void privateStaticMethod(String str, String str2) {
+        System.out.println("private method" + str);
+    }
 
     public static Account openAccount(String username, String password, String checkPassword) {
 
@@ -35,10 +45,9 @@ public class AccountManager {
         account.accountId = getRandomAccountId();
         accountMap.put(account.accountId,account);
 
-        //accounts [ currentAccountIndex ] = account;
-        //currentAccountIndex ++;
+//        accounts [ currentAccountIndex ] = account;
+//        currentAccountIndex ++;
         return account;
-
     }
 
     private static void reSize() {
@@ -46,7 +55,7 @@ public class AccountManager {
         for (int i = 0; i < accounts.length; i++) {
             newAccounts[i] = accounts[i];
         }
-
+        accounts = newAccounts;
     }
 
     private static String getRandomAccountId() {
@@ -60,20 +69,17 @@ public class AccountManager {
     }
 
     public static boolean loginAccount(String accountId, String password) {
-        //accounts.contains(accountId);
-
-        //for (int i = 0; i < currentAccountIndex; i++) {
-          //  Account account = accounts[i];
-            //if (account == null) {
-              //  continue;
-        //  }
- //           if (account.accountId.equals(accountId) && account.password.equals(password)) {
- //               currrentAccount = account;
- //               return true;
- //           }
-
-
-    //}
+//        accounts.contains(accountId);
+//        for (int i = 0; i < currentAccountIndex; i++) {
+//            Account account = accounts[i];
+//            if (account == null) {
+//                continue;
+//          }
+//            if (account.accountId.equals(accountId) && account.password.equals(password)) {
+//                currrentAccount = account;
+//                return true;
+//            }
+//    }
         Account account = accountMap.get(accountId);
         if (account == null){
             System.out.println("账号不存在");
@@ -166,63 +172,51 @@ public class AccountManager {
 //        for (int i = 0; i < currentAccountIndex; i++) {
 //            Account account = accounts[i];
 //            if (account == null) {
- //               continue;
- //           }
- //           if (account.accountId.equals(accountId) && account.username.equals(username)) {
- //               return account;
- //           }
- //       }
-  //      return null;
- //   }
-
-
-
-
-        //* public static void checkTransferOrder(){
-       // TransferOrder[] to=currrentAccount.getTransferOrders();
-        //for (int i=0;i < currentAccount.getTransferOrderIndex();i++);
-        //System.out.println("以上为转账记录");
-    //}
+//                continue;
+//            }
+//            if (account.accountId.equals(accountId) && account.username.equals(username)) {
+//                return account;
+//            }
+//        }
+//        return null;
+//    }
+//    public static void checkTransferOrder(){
+//        TransferOrder[] to=currrentAccount.getTransferOrders();
+//        for (int i=0;i < currentAccount.getTransferOrderIndex();i++);
+//        System.out.println("以上为转账记录");
+//    }
 
     public static void logout() {
         currrentAccount = null;
     }
 }
 
-
-   // public void test(){
-
-        //声明
-        //List<Integer> = new ArrayList<>();
-        //Integer[] arr = new Integer[10];
-        //取值
-        //arr[index]
-        //list.get(index)
-
-        //赋值
 //
+//    public void test(){
 //
-//        for(int i = 0 ;i < list.size;i++){
+//        声明
+//        List<Integer> = new ArrayList<>();
+//        Integer[] arr = new Integer[10];
+//        取值
+//        arr[index]
+//        list.get(index)
+////        赋值
+////        for(int i = 0 ;i < list.size;i++){
 //        if (list.get(1) == value){
 //            System.out.println("包含");
 //        }
-//
-//
-//
-//
-//
 //    arr[index] = value
-        //list.add(value)；存到末尾
-        //list.add(index，value)存到指定位置
-
-        //判断是否包含
-
-
-        //*       LinkedList<Long> = new ArrayList<>();
-
-        //     Set<String> set = new HashSet<>();
-        //   Set<String> set1 = new TreeSet<>();
-        // Map<String,String> map = new HashMap<>();
+//        list.add(value)；存到末尾
+//        list.add(index，value)存到指定位置
+//
+//        判断是否包含
+//
+//
+//        *       LinkedList<Long> = new ArrayList<>();
+//
+//             Set<String> set = new HashSet<>();
+//           Set<String> set1 = new TreeSet<>();
+//         Map<String,String> map = new HashMap<>();
 
 
 

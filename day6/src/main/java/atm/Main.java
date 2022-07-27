@@ -64,7 +64,7 @@ public class Main {
         System.out.println("2.存钱");
         System.out.println("3.转账");
         System.out.println("4.查询余额");
-        System.out.println("5.查询流水");
+        System.out.println("5.修改密码");
         System.out.println("6.退出");
         Scanner in = new Scanner(System.in);
         int choice = in.nextInt();
@@ -107,7 +107,10 @@ public class Main {
                 System.out.println("您的余额为: " + balance);
                 printUserMenu();
                 break;
-
+            case 5:
+                System.out.println("请输入新密码: ");
+                String newPassword = in.next();
+                break;
             case 6:
                 System.out.println("===退出===");
                 printMainMenu();
