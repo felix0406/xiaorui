@@ -6,7 +6,8 @@ import java.awt.*;
 import java.awt.List;
 import java.util.*;
 
-public class AccountManager {
+public class AccountManagement {
+
     public static Account[] accounts = new Account[100];
     //public static final List<Account> accounts = new ArrayList<>();
     //public static final ArrayList<Account> accounts2 = new ArrayList<>();

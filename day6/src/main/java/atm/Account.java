@@ -1,21 +1,83 @@
 package atm;
 import java.util.Date;
-import java.util.Random;
+
 public class Account {
     public String accountId;
     public String username;
     public String password;
     public double balance = 0;
-    public Date creatTime = new Date();
+
+    /** 记录开户时间 */
+    public Date createTime = new Date();
     private CashOrder[] cashOrders = new CashOrder[1000];
     private int cashOrderIndex = 0;
+
     private TransferOrder[] transferOrders = new TransferOrder[1000];
     private int transferOrderIndex = 0;
-    public void addCashOrder(CashOrder cashOrder){
+
+    public void addCashOrder(CashOrder cashOrder) {
         cashOrders[cashOrderIndex] = cashOrder;
         cashOrderIndex++;
     }
+
     public CashOrder[] getCashOrders() {
         return cashOrders;
     }
+
+
 }
+//import java.util.Random;
+//
+//public class Account {
+//    private double balance;
+//    private String accountId;
+//    private String password;
+//    private String userName;
+//    private TransferOrder[] transferOrders;
+//
+//    public Account(String userName, String password){
+//        this.userName = userName;
+//        this.password = password;
+//        this.accountId = getRandom(6);
+//    }
+//
+//    private static String getRandom(int len) {
+//        Random r = new Random();
+//        StringBuilder rs = new StringBuilder();
+//        for (int i = 0; i < len; i++) {
+//            rs.append(r.nextInt(10));
+//        }
+//        return rs.toString();
+//    }
+//
+//    public void deposit(double amount){
+//        balance += amount;
+//    }
+//
+//    public void withdraw(double amount){
+//        balance -= amount;
+//    }
+//
+//    public double getBalance(){
+//        return balance;
+//    }
+//
+//    public void transfer(Account to, double amount){
+//        assert balance > amount : "Balance is not enough";
+//        to.deposit(balance);
+//        withdraw(balance);
+//    }
+//
+//    public String getAccountId(){
+//        return accountId;
+//    }
+//
+//    public String getPassword(){
+//        return password;
+//    }
+//
+//    @Override
+//    public String toString(){
+//        return "账户号: " + accountId + " 姓名: " + userName + " 当前余额: " + balance;
+//    }
+//}

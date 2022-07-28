@@ -64,9 +64,5 @@ public class TwoSum {
         }
         return new int[]{};
     }
-    @Override
-    public void solution (){
-        System.out.println("TwoSum.solution()");
-    }
 
 }
