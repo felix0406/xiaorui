@@ -17,7 +17,7 @@ public class ExceptionStudy {
             }
         }
         if (a == 0){
-            //throw new RuntimeException("error");
+
             throw new ArithmeticException("error");
         }
         System.out.println(a);
